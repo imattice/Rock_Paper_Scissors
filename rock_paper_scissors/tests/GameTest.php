@@ -1,6 +1,26 @@
-//User inputs rock, computer inputs paper; paper wins
-//input->
-//output->
+<?php
+
+    require_once "src/Game.php";
+
+    class GameTest extends PHPUnit_Framework_TestCase
+    {
+
+        //User inputs rock, computer inputs paper; paper wins
+        //input->
+        //output->
+        function test_makeGame_compPaperWins()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = "rock";
+            $comp = "paper";
+
+            //Act
+            $result = $test_Game->makeGame($user, $comp);
+
+            //Assert
+            $this->assertEquals("paper wins", $result);
+        }
 
 //User inputs scissors, computer inputs rock; rock wins
 //input->
@@ -29,3 +49,5 @@
 //Computer pulls random number to decide computer choice
 //input->
 //output->
+    }
+?>
