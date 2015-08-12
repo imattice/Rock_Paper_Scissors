@@ -30,7 +30,7 @@
             //Arrange
             $test_Game = new Game;
             $user = "scissors";
-            $comp = "paper";
+            $comp = "rock";
 
             //Act
             $result = $test_Game->makeGame($user, $comp);
