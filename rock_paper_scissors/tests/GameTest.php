@@ -116,7 +116,8 @@
         {
             //Arrange
             $test_Game = new Game;
-            $user = $comp;
+            $user = "rock";
+            $comp = "rock";
 
             //Act
             $result = $test_Game->makeGame($user, $comp);

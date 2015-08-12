@@ -17,6 +17,8 @@
                 return "scissors wins";
             } elseif ($user == "paper" && $comp == "rock") {
                 return "paper wins";
+            } elseif ($user = $comp) {
+                return "no one wins";
             }
         }
     }
