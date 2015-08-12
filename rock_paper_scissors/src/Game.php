@@ -2,6 +2,16 @@
 
     class Game
     {
+        private $user;
+        private $comp;
+
+        function setUser($user) {
+            $this->user = (string) $new_user;
+        }
+
+        function getUser() {
+            return $this->user;
+        }
 
 
         function makeGame($user, $comp)//, $is_random)
