@@ -20,7 +20,7 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertEquals("paper wins", $result);
+            $this->assertEquals("You lose.", $result);
         }
 
         //User inputs scissors, computer inputs rock; rock wins
@@ -38,7 +38,7 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertEquals("rock wins", $result);
+            $this->assertEquals("You lose.", $result);
         }
 
         //User inputs paper, computer inputs scissors; scissors wins
@@ -56,7 +56,7 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertEquals("scissors wins", $result);
+            $this->assertEquals("You lose.", $result);
         }
 
         //User inputs rock, computer inputs scissors; rock wins
@@ -74,7 +74,7 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertEquals("rock wins", $result);
+            $this->assertEquals("You win!", $result);
         }
 
         //User inputs scissors, computer inputs paper; scissors wins
@@ -92,7 +92,7 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertEquals("scissors wins", $result);
+            $this->assertEquals("You win!", $result);
 
 
         }
@@ -112,7 +112,7 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertEquals("paper wins", $result);
+            $this->assertEquals("You win!", $result);
         }
 
         //User inputs matches computer input; tie -> no winner
@@ -130,7 +130,7 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertEquals("no one wins", $result);
+            $this->assertEquals("It's a tie!", $result);
         }
         //Computer pulls random number to decide computer choice
         //input->
@@ -147,8 +147,8 @@
             $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
-            $this->assertTrue($result == "rock wins" || $result == "paper wins" ||
-                              $result == "scissors wins" || $result == "no one wins");
+            $this->assertTrue($result == "You win!" || $result == "You lose" ||
+                               $result == "It's a tie!");
         }
     }
 ?>

@@ -2,39 +2,39 @@
 
     class Game
     {
-        function makeGame($user, $comp, $is_random)
+
+
+        function makeGame($user, $comp)//, $is_random)
         {
-            //$comp_choices = array("rock", "paper", "scissors");
-            // $comp = array_rand($comp_choices, 1);
-            // var_dump($comp_choices[$comp]);
+            //$is_random = true;
 
-            if ($is_random) {
-                $comp_number = rand(1, 3);
-                if ($comp_number == 1) {
-                    $comp = "rock";
-                } elseif ($comp_number == 2) {
-                    $comp = "paper";
-                } elseif ($comp_number == 3) {
-                    $comp = "scissors";
-                }
-            }
+        //    if ($is_random) {
+                // $comp_number = rand(1, 3);
+                // if ($comp_number == 1) {
+                //     $comp = "rock";
+                // } elseif ($comp_number == 2) {
+                //     $comp = "paper";
+                // } elseif ($comp_number == 3) {
+                //     $comp = "scissors";
+                // }
+    //        }
 
-            var_dump($comp);
+        //    var_dump($comp);
 
             if ($user == "rock" && $comp == "paper") {
-                return "paper wins";
+                return "You lose.";
             } elseif ($user == "scissors" && $comp == "rock"){
-                return "rock wins";
+                return "You lose.";
             } elseif ($user == "paper" && $comp == "scissors"){
-                return "scissors wins";
+                return "You lose.";
             } elseif ($user == "rock" && $comp == "scissors") {
-                return "rock wins";
+                return "You win!";
             } elseif ($user == "scissors" && $comp == "paper") {
-                return "scissors wins";
+                return "You win!";
             } elseif ($user == "paper" && $comp == "rock") {
-                return "paper wins";
+                return "You win!";
             } elseif ($user = $comp) {
-                return "no one wins";
+                return "It's a tie!";
             }
         }
     }
