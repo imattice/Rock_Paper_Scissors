@@ -93,8 +93,8 @@
         }
 
         //User inputs paper, computer inputs rock; paper wins
-        //input->
-        //output->
+        //input-> paper, rock
+        //output-> paper wins
         function test_makeGame_userPaperWins()
         {
             //Arrange
@@ -110,9 +110,20 @@
         }
 
         //User inputs matches computer input; tie -> no winner
-        //input->
-        //output->
+        //input-> user = comp
+        //output-> nobody wins
+        function test_makeGame_noWin()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = $comp;
 
+            //Act
+            $result = $test_Game->makeGame($user, $comp);
+
+            //Assert
+            $this->assertEquals("no one wins", $result);
+        }
         //Computer pulls random number to decide computer choice
         //input->
         //output->
