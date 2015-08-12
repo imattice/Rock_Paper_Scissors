@@ -6,8 +6,8 @@
     {
 
         //User inputs rock, computer inputs paper; paper wins
-        //input->
-        //output->
+        //input-> rock, paper
+        //output-> paper wins
         function test_makeGame_compPaperWins()
         {
             //Arrange
@@ -22,9 +22,22 @@
             $this->assertEquals("paper wins", $result);
         }
 
-//User inputs scissors, computer inputs rock; rock wins
-//input->
-//output->
+        //User inputs scissors, computer inputs rock; rock wins
+        //input->scissors, rock
+        //output-> rock wins
+        function test_makeGame_compRockWins()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = "scissors";
+            $comp = "paper";
+
+            //Act
+            $result = $test_Game->makeGame($user, $comp);
+
+            //Assert
+            $this->assertEquals("rock wins", $result);
+        }
 
 //User inputs paper, computer inputs scissors; scissors wins
 //input->
