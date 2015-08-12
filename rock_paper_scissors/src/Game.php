@@ -11,10 +11,12 @@
                 return "rock wins";
             } elseif ($user == "paper" && $comp == "scissors"){
                 return "scissors wins";
-            } elseif ($user = "rock" && $comp == "scissors") {
+            } elseif ($user == "rock" && $comp == "scissors") {
                 return "rock wins";
-            } elseif ($user = "scissors" && $comp == "paper") {
+            } elseif ($user == "scissors" && $comp == "paper") {
                 return "scissors wins";
+            } elseif ($user == "paper" && $comp == "rock") {
+                return "paper wins";
             }
         }
     }
