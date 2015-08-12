@@ -87,7 +87,7 @@
             $result = $test_Game->makeGame($user, $comp);
 
             //Assert
-            $this->assertEquals("rock wins", $result);
+            $this->assertEquals("scissors wins", $result);
 
 
         }
