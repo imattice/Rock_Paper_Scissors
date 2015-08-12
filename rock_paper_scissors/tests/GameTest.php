@@ -14,9 +14,10 @@
             $test_Game = new Game;
             $user = "rock";
             $comp = "paper";
+            $is_random = false;
 
             //Act
-            $result = $test_Game->makeGame($user, $comp);
+            $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
             $this->assertEquals("paper wins", $result);
@@ -31,9 +32,10 @@
             $test_Game = new Game;
             $user = "scissors";
             $comp = "rock";
+            $is_random = false;
 
             //Act
-            $result = $test_Game->makeGame($user, $comp);
+            $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
             $this->assertEquals("rock wins", $result);
@@ -48,9 +50,10 @@
             $test_Game = new Game;
             $user = "paper";
             $comp = "scissors";
+            $is_random = false;
 
             //Act
-            $result = $test_Game->makeGame($user, $comp);
+            $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
             $this->assertEquals("scissors wins", $result);
@@ -65,9 +68,10 @@
             $test_Game = new Game;
             $user = "rock";
             $comp = "scissors";
+            $is_random = false;
 
             //Act
-            $result = $test_Game->makeGame($user, $comp);
+            $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
             $this->assertEquals("rock wins", $result);
@@ -82,9 +86,10 @@
             $test_Game = new Game;
             $user = "scissors";
             $comp = "paper";
+            $is_random = false;
 
             //Act
-            $result = $test_Game->makeGame($user, $comp);
+            $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
             $this->assertEquals("scissors wins", $result);
@@ -101,9 +106,10 @@
             $test_Game = new Game;
             $user = "paper";
             $comp = "rock";
+            $is_random = false;
 
             //Act
-            $result = $test_Game->makeGame($user, $comp);
+            $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
             $this->assertEquals("paper wins", $result);
@@ -118,9 +124,10 @@
             $test_Game = new Game;
             $user = "rock";
             $comp = "rock";
+            $is_random = false;
 
             //Act
-            $result = $test_Game->makeGame($user, $comp);
+            $result = $test_Game->makeGame($user, $comp, $is_random);
 
             //Assert
             $this->assertEquals("no one wins", $result);
@@ -128,5 +135,20 @@
         //Computer pulls random number to decide computer choice
         //input->
         //output->
+        function test_makeGame_random()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = "rock";
+            $comp = "rock";
+            $is_random = true;
+
+            //Act
+            $result = $test_Game->makeGame($user, $comp, $is_random);
+
+            //Assert
+            $this->assertTrue($result == "rock wins" || $result == "paper wins" ||
+                              $result == "scissors wins" || $result == "no one wins");
+        }
     }
 ?>
