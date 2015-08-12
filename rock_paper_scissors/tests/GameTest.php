@@ -92,16 +92,29 @@
 
         }
 
-//User inputs paper, computer inputs rock; paper wins
-//input->
-//output->
+        //User inputs paper, computer inputs rock; paper wins
+        //input->
+        //output->
+        function test_makeGame_userPaperWins()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = "paper";
+            $comp = "rock";
 
-//User inputs matches computer input; tie -> no winner
-//input->
-//output->
+            //Act
+            $result = $test_Game->makeGame($user, $comp);
 
-//Computer pulls random number to decide computer choice
-//input->
-//output->
+            //Assert
+            $this->assertEquals("paper wins", $result);
+        }
+
+        //User inputs matches computer input; tie -> no winner
+        //input->
+        //output->
+
+        //Computer pulls random number to decide computer choice
+        //input->
+        //output->
     }
 ?>
