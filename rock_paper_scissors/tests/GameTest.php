@@ -39,17 +39,58 @@
             $this->assertEquals("rock wins", $result);
         }
 
-//User inputs paper, computer inputs scissors; scissors wins
-//input->
-//output->
+        //User inputs paper, computer inputs scissors; scissors wins
+        //input-> paper, scissors
+        //output-> scissor wins
+        function test_makeGame_compScissorsWins()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = "paper";
+            $comp = "scissors";
 
-//User inputs rock, computer inputs scissors; rock wins
-//input->
-//output->
+            //Act
+            $result = $test_Game->makeGame($user, $comp);
 
-//User inputs scissors, computer inputs paper; scissors wins
-//input->
-//output->
+            //Assert
+            $this->assertEquals("scissors wins", $result);
+        }
+
+        //User inputs rock, computer inputs scissors; rock wins
+        //input-> rock, scissors
+        //output-> rock
+        function test_makeGame_userRockWins()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = "rock";
+            $comp = "scissors";
+
+            //Act
+            $result = $test_Game->makeGame($user, $comp);
+
+            //Assert
+            $this->assertEquals("rock wins", $result);
+        }
+
+        //User inputs scissors, computer inputs paper; scissors wins
+        //input-> scissors, paper
+        //output-> scissors wins
+        function test_makeGame_userScissorsWins()
+        {
+            //Arrange
+            $test_Game = new Game;
+            $user = "scissors";
+            $comp = "paper";
+
+            //Act
+            $result = $test_Game->makeGame($user, $comp);
+
+            //Assert
+            $this->assertEquals("rock wins", $result);
+
+
+        }
 
 //User inputs paper, computer inputs rock; paper wins
 //input->
