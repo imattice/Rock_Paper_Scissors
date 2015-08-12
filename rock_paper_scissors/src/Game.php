@@ -14,20 +14,20 @@
         }
 
 
-        function makeGame($user, $comp)//, $is_random)
+        function makeGame($user, $comp, $is_random)
         {
             //$is_random = true;
 
-        //    if ($is_random) {
-                // $comp_number = rand(1, 3);
-                // if ($comp_number == 1) {
-                //     $comp = "rock";
-                // } elseif ($comp_number == 2) {
-                //     $comp = "paper";
-                // } elseif ($comp_number == 3) {
-                //     $comp = "scissors";
-                // }
-    //        }
+           if ($is_random) {
+                $comp_number = rand(1, 3);
+                if ($comp_number == 1) {
+                    $comp = "rock";
+                } elseif ($comp_number == 2) {
+                    $comp = "paper";
+                } elseif ($comp_number == 3) {
+                    $comp = "scissors";
+                }
+            }
 
         //    var_dump($comp);
 
